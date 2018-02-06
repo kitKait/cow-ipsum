@@ -1,6 +1,9 @@
 body {
 	font-size: 62.5%;
-	background-color: $background;
+	background: url(../../assets/stijn-te-strake-316914.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
 }
 
 .outerWrapper {
@@ -15,5 +18,5 @@ body {
 	width: 70%;
 	margin: 2rem auto;
 	padding-bottom: 2rem;
-	border-bottom: 2px dashed $lightBlue;
+	border-bottom: 2px dashed black;
 }
