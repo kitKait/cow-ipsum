@@ -15,8 +15,14 @@ console.log(cowWordList);
 // empty array to store selected words
 var newWordsArray = [];
 
+// variable to store one sentence 
+var cowSentence = void 0;
+
 // empty array to store selected sentences
 var newSentencesArray = [];
+
+// variable to store paragraph
+var cowParagraph = void 0;
 
 // generate 10 random words from the cowWordList, and make a sentence with the words
 var generateCowWords = function generateCowWords() {
@@ -27,33 +33,32 @@ var generateCowWords = function generateCowWords() {
 		// console.log(randoWord);
 		newWordsArray.push(randoWord);
 	}
-	// console.log(newWordsArray);
+};
+
+var generateSentence = function generateSentence() {
 	// add the random words to an array with a space in between
-	cowIpsumApp.cowSentence = newWordsArray.join(' ');
-	console.log(cowIpsumApp.cowSentence);
+	cowIpsumApp.makeSentence = newWordsArray.join(' ');
+	// console.log(cowIpsumApp.cowSentence);
 	// capitalize and period-ize the sentence
-	cowIpsumApp.properSentence = cowIpsumApp.cowSentence.charAt(0).toUpperCase() + cowIpsumApp.cowSentence.slice(1) + '.';
-	console.log(cowIpsumApp.properSentence);
-	// console.log(typeof cowIpsumApp.properSentence);
-	// make array of 10 sentences
-	newSentencesArray.push(cowIpsumApp.properSentence);
-	console.log(newSentencesArray);
-	// console.log(typeof newSentencesArray);
+	cowSentence = cowIpsumApp.makeSentence.charAt(0).toUpperCase() + cowIpsumApp.makeSentence.slice(1) + '.';
+	console.log(cowSentence);
 };
 
 // make a paragraph of 8 sentences
 var generateParagraph = function generateParagraph() {
 	// run sentence generator
 	for (var i = 0; i < 9; i++) {
-		generateCowWords();
+		generateSentence();
+		newSentencesArray.push(cowSentence);
 	}
 	// convert the array of sentences to one string with a space after
-	cowIpsumApp.paragraph = newSentencesArray.join(' ').slice(0, -1) + ', moooooooo.';
-	console.log(cowIpsumApp.paragraph);
+	cowParagraph = newSentencesArray.join(' ').slice(0, -1) + ', moooooooo.';
+	console.log(cowParagraph);
 };
 
 cowIpsumApp.init = function () {
 	generateCowWords();
+	generateSentence();
 	generateParagraph();
 };
 
