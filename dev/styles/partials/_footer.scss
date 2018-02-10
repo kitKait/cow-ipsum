@@ -1,9 +1,19 @@
 footer {
-    background: black;
+    // background: $black;
     position: absolute;
-    bottom: 0;
+    bottom: -5%;
     left: 0;
     right: 0;
-    color: white;
+    color: $background;
     text-align: center;
+    text-shadow: 1px 1px 5px $brown;
+}
+
+a {
+    text-decoration: none;
+    color: $background;
+    text-shadow: 1px 1px 5px $brown;
+    &:hover {
+        color: rgba(192, 177, 177, 0.815);
+    }
 }

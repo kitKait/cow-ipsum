@@ -26,7 +26,7 @@ cowIpsumApp.generateSentence = () => {
 	let makeSentence = cowIpsumApp.newWordsArray.join(' ');
 	// capitalize and period-ize the sentence
 	cowIpsumApp.sentence = makeSentence.charAt(0).toUpperCase() + makeSentence.slice(1) + '.';
-	$('.displayIpsum').html(`<p>${cowIpsumApp.sentence}</p>`);
+	$('.displayIpsum').html(`<p id="copy">${cowIpsumApp.sentence}</p>`);
 	return cowIpsumApp.sentence;
 }
 
@@ -40,12 +40,39 @@ cowIpsumApp.generateParagraph = () => {
 	}
 	// convert the array of sentences to one string with a space after
 	cowIpsumApp.paragraph = cowIpsumApp.newSentencesArray.join(' ').slice(0, -1) + ', moooooooo.';
-	$('.displayIpsum').html(`<p>${cowIpsumApp.paragraph}</p>`);
+	$('.displayIpsum').html(`<p id="copy">${cowIpsumApp.paragraph}</p>`);
 }
 
-// Method to copy cow text
-cowIpsumApp.copyText = () => {
-	console.log('meep');
+
+const clipboard = new Clipboard('#copyButton');
+
+// clipboard.on('success', function (e) {
+// 	console.info('Action:', e.action);
+// 	console.info('Text:', e.text);
+// 	console.info('Trigger:', e.trigger);
+
+// 	e.clearSelection();
+// });
+
+// clipboard.on('error', function (e) {
+// 	console.error('Action:', e.action);
+// 	console.error('Trigger:', e.trigger);
+// });
+
+cowIpsumApp.getCowText = () => {
+	$('#sentenceButton').addClass('hide');
+	$('#paragraphButton').addClass('hide');
+	$('#copyButton').removeClass('hide');
+	$('#backButton').removeClass('hide');
+	$('.textDisplay').removeClass('hide');
+}
+
+cowIpsumApp.refresh = () => {
+	$('#sentenceButton').removeClass('hide');
+	$('#paragraphButton').removeClass('hide');
+	$('#copyButton').addClass('hide');
+	$('#backButton').addClass('hide');
+	$('.textDisplay').addClass('hide');
 }
 
 // event listeners
@@ -53,15 +80,24 @@ cowIpsumApp.events = () => {
 	$('#sentenceButton').on('click', (e) => {
 		e.preventDefault();
 		cowIpsumApp.generateSentence();
+		cowIpsumApp.getCowText();
+		// $('.textDisplay').addClass('topSpacing');
 	});
 	
 	$('#paragraphButton').on('click', (e) => {
 		e.preventDefault();
 		cowIpsumApp.generateParagraph();
+		cowIpsumApp.getCowText();
 	});
 
 	$('#copyButton').on('click', (e) => {
 		e.preventDefault();
+	});
+
+	$('#backButton').on('click', (e) => {
+		e.preventDefault();
+		cowIpsumApp.refresh();
+		// $('.textDisplay').removeClass('topSpacing');
 	});
 }
 
