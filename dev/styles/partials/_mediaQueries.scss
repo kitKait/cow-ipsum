@@ -1,0 +1,22 @@
+@media (max-width: 960px) {
+    .displayIpsum p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+    button {
+        width: 80%;
+        padding: 15px 10px;
+    }
+    #sentenceButton {
+        margin-top: 0;
+    }
+    .wrapper {
+        width: 90%;
+    }
+    #copyButton {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

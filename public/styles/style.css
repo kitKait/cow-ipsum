@@ -132,7 +132,22 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 body {
-  font-family: "Lora", serif; }
+  font-family: "Lora", serif;
+  font-size: 62.5%; }
+
+h1, h2 {
+  text-align: center;
+  margin: 0;
+  color: #F8FAFC;
+  text-shadow: 2px 2px 10px #421919; }
+
+h1 {
+  font-size: 2.2rem;
+  padding: 10px 0; }
+
+h2 {
+  font-size: 1.2rem;
+  padding: 15px 0; }
 
 body {
   font-size: 62.5%;
@@ -146,11 +161,88 @@ body {
   width: 70%;
   margin: 2rem auto; }
 
+.hide {
+  display: none; }
+
 footer {
-  background: black;
   position: absolute;
-  bottom: 0;
+  bottom: -5%;
   left: 0;
   right: 0;
-  color: white;
-  text-align: center; }
+  color: #F8FAFC;
+  text-align: center;
+  text-shadow: 1px 1px 5px #421919; }
+
+a {
+  text-decoration: none;
+  color: #F8FAFC;
+  text-shadow: 1px 1px 5px #421919; }
+  a:hover {
+    color: rgba(192, 177, 177, 0.815); }
+
+.buttons {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+button {
+  padding: 15px 0;
+  width: 380px;
+  border-radius: 5px;
+  font-size: 1.0rem;
+  border: 2px solid #F8FAFC;
+  -webkit-box-shadow: 1px 1px 8px #421919;
+          box-shadow: 1px 1px 8px #421919;
+  background: rgba(0, 0, 0, 0.801);
+  color: #F8FAFC;
+  margin: 15px 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  button:hover {
+    background: rgba(51, 39, 39, 0.9); }
+
+#sentenceButton {
+  margin-top: 15vh; }
+
+#copyButton {
+  margin: 15px; }
+
+.displayIpsum p {
+  font-size: 1.2rem;
+  width: 80%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.45);
+  padding: 20px; }
+
+.hideIpsum {
+  visibility: hidden; }
+
+.topSpacing {
+  margin-top: 10vh; }
+
+@media (max-width: 960px) {
+  .displayIpsum p {
+    width: 100%; } }
+
+@media (max-width: 460px) {
+  button {
+    width: 80%;
+    padding: 15px 10px; }
+  #sentenceButton {
+    margin-top: 0; }
+  .wrapper {
+    width: 90%; }
+  #copyButton {
+    margin-left: 0;
+    margin-right: 0; } }

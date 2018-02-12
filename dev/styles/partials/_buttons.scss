@@ -1,0 +1,32 @@
+.buttons {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 15px 0;
+    width: 380px;
+	border-radius: 5px;
+	font-size: 1.0rem;
+	border: 2px solid $background;
+	box-shadow: 1px 1px 8px $brown;
+	background: $black;
+    color: $background;
+    margin: 15px 0;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        background: rgba(51, 39, 39, 0.9);
+    }
+}
+
+#sentenceButton {
+    margin-top: 15vh;
+}
+
+#copyButton {
+    margin: 15px;
+}
+

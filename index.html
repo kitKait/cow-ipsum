@@ -20,21 +20,22 @@
 				<h2>An udderly delightful lorem ipsum generator 🐮</h2>
 			</div>
 		</header>
+		
+		<section class="textDisplay hide"><div class="wrapper displayIpsum">
+		</div></section>
 
 		<section class="buttons">
-			<button>Hit me with some herd werds!</button>
-		</section>
-
-		<section class="displayIpsum"></section>
-
-		<section class="buttons">
-			<button>Copy Text</button>
-			<button>More cow words, please!</button>
+			<button id="sentenceButton">Hit me with a handful of herd words!</button>
+			<button id="paragraphButton">Lots more cow words, please!</button>
+			<div>
+				<button id="copyButton" class="hide" data-clipboard-target="#copy">Copy Text</button>
+				<button id="backButton" class="hide">Let's moo again.</button>
+			</div>
 		</section>
 
 		<footer>
 			<div class="wrapper">
-				<p>Background image by <a href="">xxx</a>, favicon image by <a href="">xxx</a>.</p>
+				<p>Background image by <a href="">Stijn te Strake</a>, favicon image from <a href="">The Noun Project</a>.</p>
 				<p>Made with 💖 by <a href="https://www.kaitsykes.com/">Kait Sykes</a> and <a href="http://kittyyau.com/">Kitty Yau</a>.</p>
 			</div>
 		</footer>
@@ -42,6 +43,7 @@
 
 	<!-- SCRIPTS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 	<script src="/public/scripts/main.js"></script>
 	<!-- scripts end -->
 </body>
