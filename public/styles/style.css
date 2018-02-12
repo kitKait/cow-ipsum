@@ -149,9 +149,15 @@ h2 {
   font-size: 1.2rem;
   padding: 15px 0; }
 
+footer p {
+  font-size: 0.65rem; }
+
+header h1 a:hover {
+  color: #F8FAFC; }
+
 body {
   font-size: 62.5%;
-  background: url(../../assets/stijn-te-strake-316914.jpg) no-repeat;
+  background: url(../../assets/amanda-kerr-226442.jpg) no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100%; }
@@ -166,12 +172,17 @@ body {
 
 footer {
   position: absolute;
-  bottom: -5%;
+  bottom: 0;
   left: 0;
   right: 0;
   color: #F8FAFC;
   text-align: center;
   text-shadow: 1px 1px 5px #421919; }
+
+.footerWrapper {
+  max-width: 1170px;
+  width: 70%;
+  margin: 2rem auto 0 auto; }
 
 a {
   text-decoration: none;

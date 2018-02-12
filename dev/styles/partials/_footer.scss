@@ -1,12 +1,18 @@
 footer {
     // background: $black;
     position: absolute;
-    bottom: -5%;
+    bottom: 0;
     left: 0;
     right: 0;
     color: $background;
     text-align: center;
     text-shadow: 1px 1px 5px $brown;
+}
+
+.footerWrapper {
+    max-width: 1170px;
+	width: 70%;
+	margin: 2rem auto 0 auto;
 }
 
 a {
