@@ -4,7 +4,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    color: $background;
+    color: $white;
     text-align: center;
     text-shadow: 1px 1px 5px $brown;
 }
@@ -17,7 +17,7 @@ footer {
 
 a {
     text-decoration: none;
-    color: $background;
+    color: $white;
     text-shadow: 1px 1px 5px $brown;
     &:hover {
         color: rgba(192, 177, 177, 0.815);
