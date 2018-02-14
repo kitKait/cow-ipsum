@@ -1,25 +1,6 @@
 footer {
-    // background: $black;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    background: $black;
     color: $white;
     text-align: center;
     text-shadow: 1px 1px 5px $brown;
-}
-
-.footerWrapper {
-    max-width: 1170px;
-	width: 70%;
-	margin: 2rem auto 0 auto;
-}
-
-a {
-    text-decoration: none;
-    color: $white;
-    text-shadow: 1px 1px 5px $brown;
-    &:hover {
-        color: rgba(192, 177, 177, 0.815);
-    }
 }
