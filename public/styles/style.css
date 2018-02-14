@@ -164,7 +164,8 @@ body {
   font-size: 62.5%;
   background: url(../../assets/tim-wright-152664.jpg) no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
